@@ -1,12 +1,16 @@
 #include <iostream>
 using namespace std;
 
+//Abstract Class / Interface / Contract.
 class clsMobile {
     virtual void Dial(string PhoneNumber) = 0;
     virtual void SendSMS(string PhoneNumber, string Text) = 0;
     virtual void TakePicture() = 0;
 };
 
+
+/*This class signed a contract with clsMobile abstract class
+ therefore it should implement everything in the abstract class*/
 class clsSmartphone : public clsMobile {
 
   public:
